@@ -24,4 +24,10 @@
 }
 .image__icons-right {
   right: -1px;
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    padding: 0 6rem;
+  }
 }/*# sourceMappingURL=productimage.css.map */

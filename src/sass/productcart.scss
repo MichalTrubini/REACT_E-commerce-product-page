@@ -16,7 +16,7 @@
     }
 
     &__input {
-        padding: 2.2rem 0;
+        padding: 1.8rem 0;
         font-size: 1.6rem;
         font-weight: 700;
         line-height: 2rem;
@@ -44,7 +44,7 @@
         border: none;
         box-shadow: 0px 20px 50px -20px #FF7E1B;
         border-radius: 10px;
-        padding: 1.9rem 0;
+        padding: 1.8rem 0;
         font-weight: 700;
         line-height: 2rem;
         display: flex;
@@ -55,5 +55,30 @@
 
     &__button img {
         filter: brightness(0) saturate(100%) invert(92%) sepia(99%) saturate(4%) hue-rotate(214deg) brightness(106%) contrast(100%);
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    .product-cart {
+
+        &__container {
+            width: auto;
+            margin-bottom: 0;
+        }
+
+        &__form {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1.6rem;
+        }
+
+        &__input {
+            max-width: 15.7rem;
+        }
+
+        &__button {
+            width: 27.2rem;
+        }
     }
 }
