@@ -1,18 +1,20 @@
  import logo from '../images/logo.svg';
  import hamburger from '../images/icon-menu.svg';
- import cart from '../icon-cart.svg';
- import profileImage from '../images/icon-avatar.png'
- 
+ import cart from '../images/icon-cart.svg';
+ import profileImage from '../images/image-avatar.png';
+
+ import '../css/nav.css'
+
 const Nav = () => {
     return (
-        <nav className='nav'>
-            <div>
+        <nav className='nav padding-sm'>
+            <div className='nav__left'>
                 <img src={hamburger} alt="menu" />
                 <img src={logo} alt="sneakers" />
             </div>
-            <div>
+            <div className='nav__right'>
                 <img src={cart} alt="cart" />
-                <img src={profileImage} alt="profile image" />
+                <img src={profileImage} alt="profile" className='nav__profile'/>
             </div>
         </nav>
     )

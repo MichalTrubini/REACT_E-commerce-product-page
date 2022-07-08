@@ -1,0 +1,67 @@
+@import 'variables';
+
+.product {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+
+    &__brand {
+        color: $Orange;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 1.85px;
+        text-transform: uppercase;
+        margin-bottom: 1.9rem;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        margin-bottom: 1.5rem;
+        color: $Very-dark-blue;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        color:$Dark-grayish-blue;
+        margin-bottom: 2.4rem;
+    }
+
+    &__pricing {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__pricing-discount {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.3rem;
+    }
+
+    &__discount-price {
+        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+        color: $Very-dark-blue;
+    }
+
+    &__discount {
+        color: $Orange;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        background-color: $Pale-orange;
+        border-radius: 6px;
+        padding: 7px;
+    }
+
+    &__price {
+        color: $Grayish-blue;
+        font-weight: 700;
+        text-decoration: line-through;
+    }
+}

@@ -1,0 +1,34 @@
+.image {
+
+    position: relative;
+
+    &__icons-container {
+
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+    }
+
+    &__button {
+        border: none;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100%;
+    }
+
+    &__icons {
+        width: 9px;
+        height: 12px;
+        position: relative;
+    }
+
+    &__icons-left {
+        left: -1px;
+    }
+
+    &__icons-right {
+        right: -1px;
+    }
+}

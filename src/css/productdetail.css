@@ -1,0 +1,57 @@
+.product {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+.product__brand {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.85px;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
+}
+.product__title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  margin-bottom: 1.5rem;
+  color: hsl(220deg, 13%, 13%);
+}
+.product__description {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: hsl(219deg, 9%, 45%);
+  margin-bottom: 2.4rem;
+}
+.product__pricing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product__pricing-discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.3rem;
+}
+.product__discount-price {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 3.5rem;
+  color: hsl(220deg, 13%, 13%);
+}
+.product__discount {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  background-color: hsl(25deg, 100%, 94%);
+  border-radius: 6px;
+  padding: 7px;
+}
+.product__price {
+  color: hsl(220deg, 14%, 75%);
+  font-weight: 700;
+  text-decoration: line-through;
+}/*# sourceMappingURL=productdetail.css.map */

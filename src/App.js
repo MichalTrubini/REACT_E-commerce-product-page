@@ -1,7 +1,11 @@
+import Nav from "./components/Nav";
+import SingleProduct from "./components/SingleProduct";
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <Nav />
+      <SingleProduct />
     </div>
   );
 }

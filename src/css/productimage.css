@@ -1,0 +1,27 @@
+.image {
+  position: relative;
+}
+.image__icons-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+}
+.image__button {
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+}
+.image__icons {
+  width: 9px;
+  height: 12px;
+  position: relative;
+}
+.image__icons-left {
+  left: -1px;
+}
+.image__icons-right {
+  right: -1px;
+}/*# sourceMappingURL=productimage.css.map */
