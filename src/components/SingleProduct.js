@@ -14,18 +14,20 @@ const SingleProduct = () => {
         }
 
     return (
-        <>
+        <div className="product__wrapper">
             <ProductImage />
-            <ProductDetail 
-                brand={productDetails.brand} 
-                title={productDetails.title}
-                description={productDetails.description}
-                discount={productDetails.discount * 100 + '%'}
-                priceDiscount={'$' + productDetails.discount * productDetails.price}
-                price={'$' + productDetails.price}
-            />
-            <ProductCart/>
-        </>
+            <div className="product__details-wrapper">
+                <ProductDetail 
+                    brand={productDetails.brand} 
+                    title={productDetails.title}
+                    description={productDetails.description}
+                    discount={productDetails.discount * 100 + '%'}
+                    priceDiscount={'$' + productDetails.discount * productDetails.price}
+                    price={'$' + productDetails.price}
+                />
+                <ProductCart/>
+            </div>
+        </div>
     )
 }
 

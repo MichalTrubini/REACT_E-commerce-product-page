@@ -6,7 +6,7 @@ import '../css/productcart.css'
 
 const ProductCart = () => {
     return (
-        <div className='product-cart padding-sm'>
+        <div className='product-cart margin-fix'>
          <form className='product-cart__form'>
             <div className='product-cart__container'>
                 <input className="product-cart__input" step={1} min={0} placeholder={0}/>

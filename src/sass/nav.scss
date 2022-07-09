@@ -1,3 +1,5 @@
+@import 'variables';
+
 .nav {
     padding-top: 1.9rem;
     padding-bottom: 2.5rem;
@@ -21,10 +23,43 @@
         width: 2.4rem;
         height: 2.4rem;
     }
+
+    &__list {
+        display: none;
+    }
 }
 
 @media screen and (min-width:768px) {
     .nav {
         padding-top: 2.8rem;
+
+        &__hamburger {
+            display: none;
+        }
+
+        &__left {
+            gap: 3rem;
+        }
+
+        &__list {
+            display: flex;
+            gap: 3.2rem;
+            font-size: 1.5rem;
+            color: $Dark-grayish-blue;
+        }
+    }
+}
+
+@media screen and (min-width:1100px) {
+
+    .nav {
+        margin: 0;
+        padding-top: 4.1rem;
+        padding-bottom: 4.5rem;
+        border-bottom: 1px solid #E4E9F2;
+
+        &__left {
+            gap: 5.65rem;
+        }
     }
 }

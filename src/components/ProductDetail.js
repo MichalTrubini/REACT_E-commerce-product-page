@@ -2,7 +2,7 @@ import '../css/productdetail.css'
 
 const ProductDetail = (props) => {
     return (
-        <div className="product padding-sm">
+        <div className="product__details-container margin-fix">
             <div >
                 <p className="product__brand">{props.brand}</p>
                 <h2 className="product__title">{props.title}</h2>

@@ -3,7 +3,7 @@ import SingleProduct from "./components/SingleProduct";
 
 function App() {
   return (
-    <div>
+    <div className="wrapper">
       <Nav />
       <SingleProduct />
     </div>

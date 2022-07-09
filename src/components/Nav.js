@@ -7,10 +7,17 @@
 
 const Nav = () => {
     return (
-        <nav className='nav padding-sm'>
+        <nav className='nav margin-fix'>
             <div className='nav__left'>
-                <img src={hamburger} alt="menu" />
+                <img className="nav__hamburger" src={hamburger} alt="menu" />
                 <img src={logo} alt="sneakers" />
+                <ul className='nav__list'>
+                    <li>Collections</li>
+                    <li>Men</li>
+                    <li>Women</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </div>
             <div className='nav__right'>
                 <img src={cart} alt="cart" />
