@@ -32,6 +32,11 @@
   padding-top: 2.5rem;
   opacity: 0;
   transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+}
+.nav__list-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 .nav__list {
   display: flex;

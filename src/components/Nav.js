@@ -1,3 +1,5 @@
+ import React, { useState } from 'react';
+ 
  import logo from '../images/logo.svg';
  import hamburger from '../images/icon-menu.svg';
  import cart from '../images/icon-cart.svg';
@@ -7,13 +9,24 @@
  import '../css/nav.css'
 
 const Nav = () => {
+
+    const [menu, setMenu] = useState(false);
+
+    const showSideMenuHandler = () => {
+        setMenu(true);
+    }
+
+    const hideSideMenuHandler = () => {
+        setMenu(false);
+    }
+
     return (
         <nav className='nav'>
             <div className='nav__left'>
-                <img className="nav__hamburger" src={hamburger} alt="menu" />
+                <img className="nav__hamburger" src={hamburger} alt="menu" onClick={showSideMenuHandler}/>
                 <img src={logo} alt="sneakers" />
-                <div className='nav__list-wrapper'>
-                    <img className="nav__menu-close" src={close} alt="close menu" />
+                <div className={ menu === true ? 'nav__list-wrapper nav__list-visible' : 'nav__list-wrapper'}>
+                    <img className="nav__menu-close" src={close} alt="close menu" onClick={hideSideMenuHandler}/>
                     <ul className='nav__list'>
                         <li>Collections</li>
                         <li>Men</li>
