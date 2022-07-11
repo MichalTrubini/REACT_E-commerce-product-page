@@ -1,4 +1,4 @@
- import React, { useState } from 'react';
+ import React, { useState, useContext } from 'react';
  
  import logo from '../images/logo.svg';
  import hamburger from '../images/icon-menu.svg';
@@ -6,7 +6,8 @@
  import profileImage from '../images/image-avatar.png';
  import close from '../images/icon-close.svg';
 
- import '../css/nav.css'
+ import '../css/nav.css';
+ import CartContext from '../store/cart-context';
 
 const Nav = () => {
 
@@ -19,6 +20,9 @@ const Nav = () => {
     const hideSideMenuHandler = () => {
         setMenu(false);
     }
+
+    const {item} = useContext(CartContext);
+    console.log(item);
 
     return (
         <nav className='nav'>
@@ -37,7 +41,10 @@ const Nav = () => {
                 </div>
             </div>
             <div className='nav__right'>
-                <img src={cart} alt="cart" />
+                <div className='nav__cart-wrapper'>
+                    <img src={cart} alt="cart" />
+                    <div className='nav__cart-bubble'>0</div>
+                </div>
                 <img src={profileImage} alt="profile" className='nav__profile'/>
             </div>
         </nav>

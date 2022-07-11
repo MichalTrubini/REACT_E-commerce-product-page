@@ -58,6 +58,25 @@
     &__hamburger {
         margin-left: 2.4rem;
     }
+
+    &__cart-wrapper {
+        position: relative;
+    }
+
+    &__cart-bubble {
+        background-color: $Orange;
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        min-width: 19px;
+        height: 14px;
+        text-align: center;
+        border-radius: 6.5px;
+        padding: 2px 6px 1px;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -89,6 +108,8 @@
             width: 100%;
             padding: 0;
             position: unset;
+            opacity:1;
+            transform: translateX(0);
         }
 
         &__list {
@@ -97,6 +118,12 @@
             font-size: 1.5rem;
             color: $Dark-grayish-blue;
             margin: 0;
+            font-weight: 400;
+        }
+
+        &__list li:hover, &__list li:focus {
+            cursor: pointer;
+            color: #1D2026;
         }
     }
 }
