@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 
 import minus from '../images/icon-minus.svg';
 import plus from '../images/icon-plus.svg';
 import cart from '../images/icon-cart.svg'
 
 import '../css/productcart.css'
+
+import CartContext from '../store/cart-context';
 
 const ProductCart = () => {
 
@@ -18,12 +20,13 @@ const ProductCart = () => {
         if (inputQty>=1) setQty(inputQty - 1);
     }
 
+    const {addToCart} = useContext(CartContext);
+
     const submitHandler = (event) => {
 
         event.preventDefault();
 
-        const cartQty = inputQty;
-        console.log(cartQty);
+        if (inputQty > 0) addToCart(inputQty);
     }
 
     return (

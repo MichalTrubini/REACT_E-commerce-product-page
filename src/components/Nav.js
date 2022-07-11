@@ -8,6 +8,7 @@
 
  import '../css/nav.css';
  import CartContext from '../store/cart-context';
+ import CartPreview from './CartPreview';
 
 const Nav = () => {
 
@@ -22,7 +23,6 @@ const Nav = () => {
     }
 
     const {item} = useContext(CartContext);
-    console.log(item);
 
     return (
         <nav className='nav'>
@@ -43,10 +43,12 @@ const Nav = () => {
             <div className='nav__right'>
                 <div className='nav__cart-wrapper'>
                     <img src={cart} alt="cart" />
-                    <div className='nav__cart-bubble'>0</div>
+                    {item.length > 0 && <div className='nav__cart-bubble'>{item[0].inputQty}</div>}
+                    
                 </div>
                 <img src={profileImage} alt="profile" className='nav__profile'/>
             </div>
+            <CartPreview />
         </nav>
     )
 }
