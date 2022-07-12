@@ -64,7 +64,7 @@ const Nav = () => {
             </div>
             <div className='nav__right'>
                 <div className='nav__cart-wrapper'>
-                    <img src={cart} alt="cart" onClick={showCartHandler} ref={cartIcon}/>
+                    <img className="nav__cart-icon" src={cart} alt="cart" onClick={showCartHandler} ref={cartIcon}/>
                     {item[0].inputQty > 0 && <div className='nav__cart-bubble'>{item[0].inputQty}</div>}
                 </div>
                 <img src={profileImage} alt="profile" className='nav__profile'/>

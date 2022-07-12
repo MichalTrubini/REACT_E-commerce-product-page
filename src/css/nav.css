@@ -20,6 +20,7 @@
 .nav__profile {
   width: 2.4rem;
   height: 2.4rem;
+  cursor: pointer;
 }
 .nav__list-wrapper {
   z-index: 10;
@@ -67,6 +68,9 @@
   text-align: center;
   border-radius: 6.5px;
   padding: 1px 6px 1px;
+}
+.nav__cart-icon {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

@@ -50,6 +50,7 @@
   line-height: 2rem;
   padding: 2.2rem 0 1.8rem;
   width: 100%;
+  cursor: pointer;
 }
 .cart-preview__empty {
   font-weight: 700;
@@ -57,6 +58,9 @@
   color: #69707D;
   padding: 7.7rem 0 5.7rem;
   text-align: center;
+}
+.cart-preview__bin {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 376px) {

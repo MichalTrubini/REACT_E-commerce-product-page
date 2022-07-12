@@ -24,9 +24,9 @@ const CartPreview = React.forwardRef((props, ref) => {
                     <img src={productImage} alt="product" className='cart-preview__image'/>
                     <div>
                         <p>Fall Limited Edition Sneakers</p>
-                        <p><span>$125.00</span> x <span>{item[0].inputQty + ' '}</span><span className='cart-preview__total-price'>$375.00</span></p>
+                        <p><span>$125.00</span> x <span>{item[0].inputQty + ' '}</span><span className='cart-preview__total-price'>{'$' + item[0].inputQty * 125}</span></p>
                     </div>
-                    <img src={trashBin} alt="delete" onClick={removeContentHandler}/>
+                    <img className="cart-preview__bin" src={trashBin} alt="delete" onClick={removeContentHandler}/>
                 </div>
                 <div className='cart-preview__button-container'>
                     <button className='cart-preview__button'>Checkout</button>
