@@ -27,6 +27,8 @@ const ProductCart = () => {
         event.preventDefault();
 
         if (inputQty > 0) addToCart(inputQty);
+
+        setQty(0);
     }
 
     return (

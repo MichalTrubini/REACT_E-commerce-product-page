@@ -6,7 +6,7 @@ import trashBin from '../images/icon-delete.svg';
 
 import CartContext from '../store/cart-context';
 
-const CartPreview = () => {
+const CartPreview = React.forwardRef((props, ref) => {
 
     const {item} = useContext(CartContext);
     const {addToCart} = useContext(CartContext);
@@ -16,7 +16,7 @@ const CartPreview = () => {
     }
 
     return (
-        <div className="cart-preview">
+        <div className="cart-preview" ref={ref} {...props}>
             <h3 className='cart-preview__heading'>Cart</h3>
             {item[0].inputQty > 0 &&
             <>
@@ -40,6 +40,6 @@ const CartPreview = () => {
             }
         </div>
     )
-}
+})
 
 export default CartPreview;

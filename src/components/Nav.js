@@ -1,4 +1,4 @@
- import React, { useState, useContext } from 'react';
+ import React, { useState, useContext, useEffect, useRef } from 'react';
  
  import logo from '../images/logo.svg';
  import hamburger from '../images/icon-menu.svg';
@@ -13,6 +13,7 @@
 const Nav = () => {
 
     const [menu, setMenu] = useState(false);
+    const [showCart, setShowCart] = useState(false);
 
     const showSideMenuHandler = () => {
         setMenu(true);
@@ -23,6 +24,27 @@ const Nav = () => {
     }
 
     const {item} = useContext(CartContext);
+
+    const showCartHandler = () => {
+        setShowCart((showCart) => !showCart);
+    }
+
+    const cartPreviewRef = useRef();
+    const cartIcon = useRef();
+    console.log(showCart);
+    useEffect(() => {
+
+        let handler = (event) => {
+            if (!cartPreviewRef.current?.contains(event.target) & !cartIcon.current.contains(event.target)){
+                setShowCart(false);
+            }
+        }
+
+        document.body.addEventListener('mousedown', handler);
+
+        return () => document.body.removeEventListener('mousedown', handler)
+
+    });
 
     return (
         <nav className='nav'>
@@ -42,13 +64,12 @@ const Nav = () => {
             </div>
             <div className='nav__right'>
                 <div className='nav__cart-wrapper'>
-                    <img src={cart} alt="cart" />
-                    {item.length > 0 && <div className='nav__cart-bubble'>{item[0].inputQty}</div>}
-                    
+                    <img src={cart} alt="cart" onClick={showCartHandler} ref={cartIcon}/>
+                    {item[0].inputQty > 0 && <div className='nav__cart-bubble'>{item[0].inputQty}</div>}
                 </div>
                 <img src={profileImage} alt="profile" className='nav__profile'/>
             </div>
-            <CartPreview />
+                {showCart && <CartPreview ref={cartPreviewRef}/>}
         </nav>
     )
 }
