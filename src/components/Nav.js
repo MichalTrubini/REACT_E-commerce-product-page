@@ -31,7 +31,7 @@ const Nav = () => {
 
     const cartPreviewRef = useRef();
     const cartIcon = useRef();
-    console.log(showCart);
+    
     useEffect(() => {
 
         let handler = (event) => {

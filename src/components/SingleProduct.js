@@ -10,12 +10,11 @@ import { ProductProvider } from "../store/product-context";
 
 const SingleProduct = () => {
 
-    //const {addToCart} = useContext(CartContext);
-    //const {test} = useContext(ProductContext);
+    //const {addToCart} = useContext(ProductContext);
     
 
     //useEffect(() => {
-    //    singleProduct(productDetails.title, productDetails.price);
+    //    test(productDetails.title, productDetails.price);
     //}
     //);
 
