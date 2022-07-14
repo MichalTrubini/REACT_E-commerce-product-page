@@ -7,21 +7,25 @@ import Arrows from "./productImage/Arrows";
 import '../css/productimage.css';
 import close from '../images/icon-close.svg';
 
-const Lightbox = (props) => {
+const Lightbox = React.forwardRef((props, ref) => {
     const [shiftValue, setShiftValue] = useState('0');
 
+    const styles = ['product__lightbox-button','product__icons product__icons-left','product__icons product__icons-right']
+    
     return (
-        <div className="product__lightbox">
-            <div className="product__image-wrapper">
+        <div className="product__lightbox" >
+            <div className="product__image-wrapper" {...props} ref={ref}>
                 <img src={close} alt="close" className="product__lightbox-close"/>
-                <div className='product__image-container'>
-                    <ProductImagePartial shiftValue={shiftValue}/>
+                <div className='product__lightbox-image-container'>
+                    <ProductImagePartial className="product__lightbox-image" shiftValue={shiftValue}/>
                 </div>
-                <Arrows onArrowClick={(shiftValue)=>{setShiftValue(shiftValue)}}/>
-                <ProductThumbnails onThumbnailClick={(shiftValue)=>{setShiftValue(shiftValue)}}/>
+                <div className='product__lightbox-icons-container'>
+                    <Arrows className={styles} shiftValue={shiftValue} onArrowClick={setShiftValue}/>
+                </div>
+                <ProductThumbnails shiftValue={shiftValue} onThumbnailClick={setShiftValue}/>
             </div>
         </div>
     )
-}
+})
 
 export default Lightbox;

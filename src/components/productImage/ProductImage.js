@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import '../../css/productimage.css';
 
@@ -11,6 +11,7 @@ const ProductImage = () => {
 
     const [shiftValue, setShiftValue] = useState('0');
     const [lightbox, setLightbox] = useState(false);
+    const lightboxRef = useRef();
 
     const screenWidth = window.innerWidth;
 
@@ -18,14 +19,32 @@ const ProductImage = () => {
         setLightbox(true);
     }
 
+    useEffect(() => {
+
+        let handler = (event) => {
+            if (!lightboxRef.current?.contains(event.target)){
+                setLightbox(false);
+            }
+        }
+        
+        document.body.addEventListener('mousedown', handler);
+
+        return () => document.body.removeEventListener('mousedown', handler)
+
+    });
+
+    const styles = ['product__button','product__icons product__icons-left','product__icons product__icons-right']
+
     return (
         <>
-            {(screenWidth > 1439 & lightbox) ? <Lightbox /> : undefined}
+            {(screenWidth > 1439 & lightbox) ? <Lightbox ref={lightboxRef}/> : undefined}
             <div className="product__image-wrapper">
                 <div className='product__image-container'>
-                    <ProductImagePartial shiftValue={shiftValue} onClick={lightboxHandler}/>
+                    <ProductImagePartial className="product__image" shiftValue={shiftValue} onClick={lightboxHandler} onLightboxClose={setLightbox}/>
                 </div>
-                <Arrows shiftValue={shiftValue} onArrowClick={setShiftValue}/>
+                <div className='product__icons-container'>
+                    <Arrows className={styles} shiftValue={shiftValue} onArrowClick={setShiftValue}/>
+                </div>
                 <ProductThumbnails shiftValue={shiftValue} onThumbnailClick={setShiftValue}/>
             </div>
         </>

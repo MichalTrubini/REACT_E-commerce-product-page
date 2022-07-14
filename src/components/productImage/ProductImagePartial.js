@@ -26,7 +26,7 @@ const ProductImagePartial = (props) => {
             {productImages.map(productImage => 
                 <img 
                     key={productImage.id} 
-                    className="product__image" 
+                    className={props.className}
                     style={{transform:`translateX(${props.shiftValue}%)`}} 
                     src={productImage.image} 
                     alt="sneakers"

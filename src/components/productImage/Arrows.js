@@ -15,13 +15,12 @@ const Arrows = (props) => {
         if (props.shiftValue < 0) props.onArrowClick(currVal => currVal + 100);
     }
 
+    const classes = props.className;
 
     return (
         <>
-            <div className='product__icons-container'>
-                <button className='product__button' onClick={previousImageHandler}><img src={previous} alt="previous" className='product__icons product__icons-left' /></button>
-                <button className='product__button' onClick={nextImageHandler}><img src={next} alt="next" className='product__icons product__icons-right' /></button>
-            </div>
+            <button className={classes[0]} onClick={previousImageHandler}><img src={previous} alt="previous" className={classes[1]} /></button>
+            <button className={classes[0]} onClick={nextImageHandler}><img src={next} alt="next" className={classes[2]} /></button>
         </>
     )
 }

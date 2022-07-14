@@ -36,7 +36,7 @@ const Nav = () => {
 
         let handler = (event) => {
             if (!cartPreviewRef.current?.contains(event.target) & !cartIcon.current.contains(event.target)){
-                setShowCart(false);
+                setShowCart( false);
             }
         }
 
