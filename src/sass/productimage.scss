@@ -178,5 +178,13 @@
             border-radius: 100%;
             cursor: pointer;
         }
+
+        &__lightbox-thumbnail-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 3.1rem;
+                margin-top: 3.2rem;
+        }
     }
 }

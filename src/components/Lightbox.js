@@ -12,17 +12,21 @@ const Lightbox = React.forwardRef((props, ref) => {
 
     const styles = ['product__lightbox-button','product__icons product__icons-left','product__icons product__icons-right']
     
+    const closeLightboxHandler = () => {
+        props.onCloseLightbox((lightbox)=>!lightbox);
+    }
+
     return (
         <div className="product__lightbox" >
             <div className="product__image-wrapper" {...props} ref={ref}>
-                <img src={close} alt="close" className="product__lightbox-close"/>
+                <img src={close} alt="close" className="product__lightbox-close" onClick={closeLightboxHandler}/>
                 <div className='product__lightbox-image-container'>
                     <ProductImagePartial className="product__lightbox-image" shiftValue={shiftValue}/>
                 </div>
                 <div className='product__lightbox-icons-container'>
                     <Arrows className={styles} shiftValue={shiftValue} onArrowClick={setShiftValue}/>
                 </div>
-                <ProductThumbnails shiftValue={shiftValue} onThumbnailClick={setShiftValue}/>
+                <ProductThumbnails className='product__lightbox-thumbnail-wrapper' shiftValue={shiftValue} onThumbnailClick={setShiftValue}/>
             </div>
         </div>
     )

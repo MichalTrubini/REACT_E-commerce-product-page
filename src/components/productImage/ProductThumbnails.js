@@ -35,7 +35,7 @@ const ProductThumbnails = (props) => {
 
     return (
         <>
-            <div className='product__thumbnail-wrapper'>
+            <div className={props.className}>
                 {productThumbnails.map(productThumbnail => 
                         <img
                             key={productThumbnail.id}

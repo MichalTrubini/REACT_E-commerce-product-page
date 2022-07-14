@@ -123,4 +123,12 @@
   .nav__left {
     gap: 5.65rem;
   }
+  .nav__profile {
+    width: 5rem;
+    height: auto;
+    border-radius: 100%;
+  }
+  .nav__profile:hover {
+    outline: 2px solid #FF7E1B;
+  }
 }/*# sourceMappingURL=nav.css.map */

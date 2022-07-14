@@ -37,7 +37,7 @@ const ProductImage = () => {
 
     return (
         <>
-            {(screenWidth > 1439 & lightbox) ? <Lightbox ref={lightboxRef}/> : undefined}
+            {(screenWidth > 1439 & lightbox) ? <Lightbox ref={lightboxRef} onCloseLightbox={setLightbox}/> : undefined}
             <div className="product__image-wrapper">
                 <div className='product__image-container'>
                     <ProductImagePartial className="product__image" shiftValue={shiftValue} onClick={lightboxHandler} onLightboxClose={setLightbox}/>
@@ -45,7 +45,7 @@ const ProductImage = () => {
                 <div className='product__icons-container'>
                     <Arrows className={styles} shiftValue={shiftValue} onArrowClick={setShiftValue}/>
                 </div>
-                <ProductThumbnails shiftValue={shiftValue} onThumbnailClick={setShiftValue}/>
+                <ProductThumbnails className='product__thumbnail-wrapper' shiftValue={shiftValue} onThumbnailClick={setShiftValue}/>
             </div>
         </>
     )

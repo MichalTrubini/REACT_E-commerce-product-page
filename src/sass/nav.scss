@@ -145,5 +145,15 @@
         &__left {
             gap: 5.65rem;
         }
+
+        &__profile {
+            width: 5rem;
+            height: auto;
+            border-radius: 100%;
+        }
+
+        &__profile:hover {
+            outline: 2px solid #FF7E1B;
+        }
     }
 }
