@@ -5,7 +5,7 @@ const ProductDetail = (props) => {
         <div className="product__details-container margin-fix">
             <div >
                 <p className="product__brand">{props.brand}</p>
-                <h2 className="product__title">{props.title}</h2>
+                <h1 className="product__title">{props.title}</h1>
                 <p className="product__description">{props.description}</p>
             </div>
             <div className='product__pricing'>

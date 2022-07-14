@@ -16,7 +16,7 @@ const SingleProduct = () => {
         }
 
     return (
-        <div className="product__wrapper">
+        <main className="product__wrapper">
             <ProductProvider>
                 <ProductImage />
                 <div className="product__details-wrapper">
@@ -31,7 +31,7 @@ const SingleProduct = () => {
                     <ProductCart/>
                 </div>
             </ProductProvider>
-        </div>
+        </main>
     )
 }
 

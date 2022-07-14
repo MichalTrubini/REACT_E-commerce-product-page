@@ -35,7 +35,8 @@ const ProductCart = () => {
         <div className='product-cart margin-fix'>
          <form className='product-cart__form'>
             <div className='product-cart__container'>
-                <input type="number" className="product-cart__input" step={1} min={0} value={inputQty} readOnly/>
+                <label htmlFor="qty" hidden>Add qty</label>
+                <input id="qty" type="number" className="product-cart__input" step={1} min={0} value={inputQty} readOnly/>
                 <div className='product-cart__icons'>
                     <img src={minus} alt="minus" onClick={qtyRemoveHandler}/>
                     <img src={plus} alt="plus" onClick={qtyAddHandler}/>
