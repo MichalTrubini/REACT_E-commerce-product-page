@@ -44,7 +44,7 @@ const ProductCart = () => {
             </div>
             <button type="submit" className="product-cart__button" onClick={submitHandler}>
                 <img src={cart} alt="cart"/>
-                <p>Add to cart</p>
+                Add to cart
             </button>
          </form>
         </div>
