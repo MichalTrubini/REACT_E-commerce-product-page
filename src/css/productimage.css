@@ -90,4 +90,22 @@
   .product__thumbnail:hover {
     filter: opacity(0.5);
   }
+  .product__lightbox {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .product__lightbox-close {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(1%) hue-rotate(68deg) brightness(100%) contrast(90%);
+  }
 }/*# sourceMappingURL=productimage.css.map */
